@@ -7,4 +7,4 @@ def home(request):
 def subscription(request,user_id):
     user = User.objects.get(id = user_id)
     subscriptions = Subscription.objects.filter(user = user)
-    return render(request, 'subscriptions.html', {'subscriptions': subscriptions , 'user' : user)
+    return render(request, 'subscriptions.html', {'subscriptions': subscriptions , 'user' : user})
