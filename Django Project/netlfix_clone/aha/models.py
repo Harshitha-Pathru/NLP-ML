@@ -17,5 +17,10 @@ class Movie(models.Model):
     def __str__(self):
         return self.title
 
+class Subscription(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    movie = models.ForeignKey(Movie,on_delete=models.CASCADE)
+    subscription_date  = models.DateField(auto_now_add=True)
+
 
 
