@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Netflix Clone</title>
+</head>
+<body>
+    <h1>Available Movies</h1>
+    <ul>
+        {% for movie in movies %}
+            <li>{{ movie.title }} - {{ movie.genre }} - <a href="{{ movie.url }}">Watch Now</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

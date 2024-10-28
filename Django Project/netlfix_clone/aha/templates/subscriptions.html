@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscriptions</title>
+</head>
+<body>
+    <h1>Subscriptions for {{ user.username }}</h1>
+    <ul>
+        {% for subscription in subscriptions %}
+            <li>{{ subscription.movie.title }} - Subscribed on {{ subscription.subscription_date }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
